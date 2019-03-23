@@ -4,15 +4,15 @@
 
 		<aside class="col-xs-4">
 		<?php Navigation();?>
-			
-			
+
+
 		</aside><!--SIDEBAR-->
 
 
 <article class="main-content col-xs-8">
 
-	
-	<?php 
+
+	<?php
 
 
 /*  Step1: Use a pre-built math function here and echo it
@@ -25,7 +25,16 @@
 
  */
 
-	
+ 	echo pow(2,8);
+	echo "<br>";
+	echo strtoupper("grandma");
+	echo "<br>";
+
+	$alpha = ["a", "d", "b", "e", "c"];
+	sort($alpha);
+	print_r($alpha);
+
+
 ?>
 
 
