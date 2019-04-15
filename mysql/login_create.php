@@ -1,24 +1,9 @@
-<?php
-  if(isset($_POST['submit'])){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-                                                          //database
-    $connection = mysqli_connect('localhost', 'root', '', 'loginapp');
+<?php include "db.php";
+include "functions.php";
 
-    if(!$username OR !$password){
-      echo "fields cannot be empty";
-    }
-
-
-    $query = "INSERT INTO users(username, password) VALUES ('$username', '$password')";
-
-    //only submit to database if both inputs were entered
-    if ($username && $password) {
-      $result = mysqli_query($connection, $query);
-    }
-
-  }
+  createUser();
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -26,6 +11,7 @@
     <title></title>
   </head>
   <body>
+    <h1>CRUD: Create</h1>
     <form action="login_create.php" method="post">
       <label for="username">Username</label>
       <input type="text" name="username">

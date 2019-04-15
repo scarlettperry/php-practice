@@ -13,6 +13,7 @@
     <title></title>
   </head>
   <body>
+    <h1>CRUD: Read</h1>
     <?php
       while($row = mysqli_fetch_assoc($result)){
         print_r($row);

@@ -1,6 +1,9 @@
 <?php include "db.php";
 include "functions.php";
-    updateLoginInfo();
+
+  deleteUser();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +13,8 @@ include "functions.php";
     <title></title>
   </head>
   <body>
-    <h1>CRUD: Update</h1>
-    <form action="login_update.php" method="post">
+    <h1>CRUD: Delete</h1>
+    <form action="login_delete.php" method="post">
       <label for="username">Username</label>
       <input type="text" name="username">
       <label for="password">Password</label>
